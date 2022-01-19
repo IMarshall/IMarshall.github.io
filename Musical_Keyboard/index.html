@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52059225-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-52059225-3');
+    </script>
+	<title>QWERTY Keyboard Synth</title>
+    <link rel="stylesheet" href="stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Use your computer keyboard as a musical instrument">
+	<meta name="author" content="Ian Marshall">
+	<meta name="application-name" content="QWERTY Keyboard Synth">
+	<meta name="keywords" content="online synth, online piano, online piano synth, synth keyboard online, online midi synth, online synthesizer keyboard, piano synthesizer online, synth piano online, synth pad online, music synthesizer online, virtual synthesizer online, midi synthesizer online, free online synth, play synth online, play piano online, online bass synth, virtual synth online, online synthesizer keyboard free, synth machine online, synth bass online, online keyboard, online piano keyboard, virtual piano online, midi keyboard online, apronus piano, midi piano online, digital piano online, virtual keyboard online, piano keys online, computer keyboard online, free online keyboard, online piano, play piano on computer, qwerty piano keyboard, musical keyboard online, virtual piano keyboard online, play keyboard online, digital keyboard online, synth keyboard online, electric piano online, online piano midi, online synthesizer keyboard, grand piano online, piano apronus, online piano keyboard play, real piano online, piano online using keyboard, interactive piano keyboard, electronic keyboard online, virtual piano keys, keyboard piano website, play piano on computer keyboard, apronus keyboard, play midi keyboard online, piano online pc, online piano apronus, virtual piano online free, digital piano website, playable piano keyboard, piano app for computer, onlinepianist, onlinepianist keyboard, organ piano online, virtual piano apronus, digital piano keyboard online, online electric keyboard, online keyboard instrument, play keyboard on computer, electronic piano keyboard online, trumpet online, online trumpet, play trumpet online, virtual trumpet, clarinet online, online clarinet, play clarinet online, virtual clarinet, flute online, online flute, play flute online, virtual flute, violin online, online violine, play violin online, virtual violin, cello online, online cello, play cello online, virtual cello, guitar online, online guitar, play guitar online, virtual guitar, marimba online, online marimba, play marimba online, virtual marimba">
+  </head>
+  <body style="background-color:#000000">
+	<svg id=loadingSquare1 width="500" height="500">
+		<rect class="squares" width="10" height="10"/>
+	</svg>
+	<svg id=loadingSquare2 width="500" height="500">
+		<rect class="squares" width="10" height="10"/>
+	</svg>
+	<svg id=loadingSquare3 width="500" height="500">
+		<rect class="squares" width="10" height="10"/>
+	</svg>
+	<button id="about">about</button>
+	<div id="infoContainer">
+		<div id="info">
+			QWERTYsynth was built by me, <a href="https://twitter.com/_kramerica" target="_blank">Ian Marshall</a>.<br><br>
+			I'm a high school music teacher turned stay-at-home dad who is learning web development while at home.<br><br>
+			In my free time, I enjoy playing drums in the world-famous jazz combo <a href="https://substandards.band/" target="_blank">Standards & Substandards</a>.
+		</div>
+	</div>
+	<button id="help">help</button>
+	<div id="helpContainer">
+		<div id="helpInfo">
+			QWERTYsynth was built to be used on a desktop computer and doesn't work well on mobile.<br><br>
+			For best results, make sure you're using Google Chrome as your browser. If you're having problems with browser shortcuts triggering while playing, there are Chrome extensions available that can disable those shortcuts.<br><br>
+			To report any other bugs, feel free to contact me at <a href="mailto:imarshall18@gmail.com">imarshall18@gmail.com</a>.
+		</div>
+	</div>
+	<div class="box">
+		<div class="met">
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td id="screen" met="1"><b>90 BPM</b></td>
+				</tr>
+				<tr>
+					<td class="metspacer" met="1"></td>
+				</tr>
+			</table>
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td class="tempo" id="tempoup" met="1"><img src="triangle.jpg" width="15px" align="right" alt="" /></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metspacer" met="1"></td>
+					<td class="play" met="1"><img src="play-button.png" width="20px" alt="" /></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metvolume" id="volumeup" met="1"><img src="triangle.jpg" width="15px" align="right" alt="" /></td>
+				</tr>
+			</table>
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td class="tempo" id="tempodown" met="1"><img src="triangle-flipped.jpg" width="15px" align="right" alt="" /></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metspacer" met="1"></td>
+					<td class="tap" met="1"><b>TAP</b></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metspacer" met="1"></td>
+					<td class="metvolume" id="volumedown" met="1"><img src="triangle-flipped.jpg" width="15px" align="right" alt="" /></td>
+				</tr>
+			</table>
+			<img src="speaker2.png" width="15px" id="metspeaker" alt="" />
+			<img src="quarter-note.png" width="40px" id="metnote" alt="" />
+		</div>
+		<div class="buttons">
+			<table style="margin-left:auto;margin-right:auto;">
+			  <tr><!--PIANO,MARIMBA,VIOLIN,CELLO,GUITAR,FLUTE,CLARINET,TRUMPET-->
+				<td class="instrument" id="piano"><b>PIANO</b></td>
+				<td class="instrument" id="guitar"><b>GUITAR</b></td>
+				<td class="instrument" id="violin"><b>VIOLIN</b></td>
+				<td class="instrument" id="cello"><b>CELLO</b></td>
+			  </tr>
+			  <tr>
+				<td class="instrument" id="marimba"><b>MARIMBA</b></td>
+				<td class="instrument" id="flute"><b>FLUTE</b></td>
+				<td class="instrument" id="clarinet"><b>CLARINET</b></td>
+				<td class="instrument" id="trumpet"><b>TRUMPET</b></td>
+			  </tr>
+			</table>
+		</div>
+		<div class="separator">
+			<table class="numpad">
+			  <tr>
+				<td class="normalkey" name="144">NUM<br>LOCK</td>
+				<td class="altkey" id="D" name="111" pitchchange="2"><b>D</b></td>
+				<td class="altkey" id="G" name="106" pitchchange="7"><b>G</b></td>
+				<td class="normalkey" name="109">-</td>
+			  </tr>
+			  <tr>
+				<td class="altkey" id="B" name="103" pitchchange="11"><b>B</b></td>
+				<td class="altkey" id="E" name="104" pitchchange="4"><b>E</b></td>
+				<td class="altkey" id="A" name="105" pitchchange="9"><b>A</b></td>
+				<td class="tonality" id="major" name="107" rowspan="2"><b>MAJ</b></td>
+			  </tr>
+			  <tr>
+				<td class="altkey" id="Ab" name="100" pitchchange="8"><b>Ab</b></td>
+				<td class="altkey" id="Db" name="101" pitchchange="1"><b>Db</b></td>
+				<td class="altkey" id="Gb" name="102" pitchchange="6"><b>F#</b></td>
+			  </tr>
+			  <tr>
+				<td class="altkey" id="F" name="97" pitchchange="5"><b>F</b></td>
+				<td class="altkey" id="Bb" name="98" pitchchange="10"><b>Bb</b></td>
+				<td class="altkey" id="Eb" name="99" pitchchange="3"><b>Eb</b></td>
+				<td class="tonality" id="minor" name="13" rowspan="2" side="numpad"><b>MIN</b></td><!--need to make invisible box so bottom half of this key is clickable-->
+			  </tr>
+			  <tr>
+				<td class="inviskey"></td>
+				<td class="inviskey"></td>
+			  </tr>
+			</table>
+		</div>
+		<div id="bottomrow">
+			<table>
+			  <tr>
+				<td class="altkey" id="C" name="96" pitchchange="0"><b>C</b></td>
+				<td class="normalkey" name="110">.</td>
+				<td class="tonality" id="minor2"></td>
+			  </tr>
+			</table>
+		</div>
+		<table>
+		  <tr>
+		    <td class="spacer" id="volumespacer"><img src="speaker2.png" width="15px" align="right" alt="" /></td>
+			<td class="spacer" id="volumebar"></td>
+		  </tr>
+		</table>
+		<table class="keyboard">
+		  <tr>
+			<td class="normalkey" name="192">`</td>
+			<td class="normalkey" name="49">1</td>
+			<td class="normalkey" name="50">2</td>
+			<td class="normalkey" name="51">3</td>
+			<td class="normalkey" name="52">4</td>
+			<td class="normalkey" name="53">5</td>
+			<td class="normalkey" name="54">6</td>
+			<td class="normalkey" name="55">7</td>
+			<td class="normalkey" name="56">8</td>
+			<td class="normalkey" name="57">9</td>
+			<td class="normalkey" name="48">0</td>
+			<td class="normalkey" name="189">-</td>
+			<td class="normalkey" name="187">=</td>
+			<td class="backspace" name="8">BACK</td>
+		  </tr>
+		 </table>
+		 <table class="keyboard">
+		  <tr>
+			<td class="tab" name="9"><b>MAX</b><br>TAB</td>
+			<td class="normalkey" name="81">Q</td>
+			<td class="normalkey" name="87">W</td>
+			<td class="normalkey" name="69">E</td>
+			<td class="normalkey" name="82">R</td>
+			<td class="normalkey" name="84">T</td>
+			<td class="normalkey" name="89">Y</td>
+			<td class="normalkey" name="85">U</td>
+			<td class="normalkey" name="73">I</td>
+			<td class="normalkey" name="79">O</td>
+			<td class="normalkey" name="80">P</td>
+			<td class="normalkey" name="219">[</td>
+			<td class="normalkey" name="221">]</td>
+			<td class="backslash" name="220"><b>MAX</b><br>\</td>
+		  </tr>
+		</table>
+		<table class="keyboard">
+		  <tr>
+			<td class="caps" name="20"><b>VOL+</b><br>CAPS</td>
+			<td class="normalkey" name="65">A</td>
+			<td class="normalkey" name="83">S</td>
+			<td class="normalkey" name="68">D</td>
+			<td class="normalkey" name="70">F</td>
+			<td class="normalkey" name="71">G</td>
+			<td class="normalkey" name="72">H</td>
+			<td class="normalkey" name="74">J</td>
+			<td class="normalkey" name="75">K</td>
+			<td class="normalkey" name="76">L</td>
+			<td class="normalkey" name="186">;</td>
+			<td class="normalkey" name="222">'</td>
+			<td class="enter" name="13"><b>VOL+</b><br>ENTER</td>
+		  </tr>
+		</table>
+		<table class="keyboard">
+		  <tr>
+			<td class="leftshift" name="16" side="left"><b>VOL-</b><br>SHIFT</td>
+			<td class="normalkey" name="90">Z</td>
+			<td class="normalkey" name="88">X</td>
+			<td class="normalkey" name="67">C</td>
+			<td class="normalkey" name="86">V</td>
+			<td class="normalkey" name="66">B</td>
+			<td class="normalkey" name="78">N</td>
+			<td class="normalkey" name="77">M</td>
+			<td class="normalkey" name="188">,</td>
+			<td class="normalkey" name="190">.</td>
+			<td class="normalkey" name="191">/</td>
+			<td class="rightshift" name="16" side="right"><b>VOL-</b><br>SHIFT</td>
+		  </tr>
+		</table>
+		<table class="keyboard">
+		  <tr>
+			<td class="ctrl" name="17" side="left"><b>MUTE</b><br>CTRL</td>
+			<td class="spacer"></td>
+			<td class="ctrl" name="18" side="left"><b>b</b><br>ALT</td>
+			<td class="spacebar" name="32"><b>SUSTAIN PEDAL</b><br>SPACEBAR</td>
+			<td class="ctrl" name="18" side="right"><b>#</b><br>ALT</td>
+			<td class="spacer"></td>
+			<td class="ctrl" name="17" side="right"><b>MUTE</b><br>CTRL</td>
+		  </tr>
+		</table>
+	</div>
+	<!--<div class="errors">
+		<table style="margin-left:auto;margin-right:auto;">
+			<tr>
+				<td id="errormessage">THAT PITCH IS OUTSIDE OF THE INSTRUMENT'S RANGE</td>
+			</tr>
+		</table>
+	</div>-->
+	<script type="text/javascript" src="scriptv2.js"></script>
+  </body>
+</html>

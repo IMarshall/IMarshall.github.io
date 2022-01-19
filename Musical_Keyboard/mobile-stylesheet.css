@@ -1,0 +1,26 @@
+body, html{
+	margin: 0px;
+	padding: 0px;
+	font-family: Courier New;
+	height:100%;
+	overflow:hidden;
+}
+
+#container{
+	text-align:center;
+}
+
+#textbox{
+	display:inline-block;
+	border: 1px solid white;
+	background-color: #000000;
+	padding: 2px 2px;
+	width:200px;
+	top:50%;
+	left:50%;
+	color:#FFFFFF;
+}
+
+a {
+	color:#0073ff;
+}
