@@ -15,10 +15,10 @@ function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Su
     Players.push(this);
 }
 
-var Aubree = new Player("Aub", 2, 4, 7, "", "", "", "", "", 1);
-var Bryson = new Player("Bry", 3, 4, 4, "", "", "", "", "", 2);
-var Ian = new Player("Ian", 3, 6, 3, "", "", "", "", "", 3);
-var Mom = new Player("Mom", 3, 5, 5, "", "", "", "", "", 4);
+var Aubree = new Player("Aub", 2, 4, 4, 5, "", "", "", "", 1);
+var Bryson = new Player("Bry", 3, 4, 4, 6, "", "", "", "", 2);
+var Ian = new Player("Ian", 3, 6, 3, 5, "", "", "", "", 3);
+var Mom = new Player("Mom", 3, 5, 5, 5, "", "", "", "", 4);
 
 function calcTotal() {
     for (var x = 0; x < Players.length; x++) {
