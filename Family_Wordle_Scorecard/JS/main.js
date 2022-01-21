@@ -1,5 +1,28 @@
 const Players = [];
 
+switch (new Date().getDay()) {
+    case 0:
+        document.getElementById("sun").style = "background-color: #e3e2e1"
+        break;
+    case 1:
+        document.getElementById("mon").style = "background-color: #e3e2e1"
+        break;
+    case 2:
+        document.getElementById("tue").style = "background-color: #e3e2e1"
+        break;
+    case 3:
+        document.getElementById("wed").style = "background-color: #e3e2e1"
+        break;
+    case 4:
+        document.getElementById("thur").style = "background-color: #e3e2e1"
+        break;
+    case 5:
+        document.getElementById("fri").style = "background-color: #e3e2e1"
+        break;
+    case 6:
+        document.getElementById("sat").style = "background-color: #e3e2e1"
+}
+
 function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Total, Rank) {
     this.Name = Name;
     this.Monday = Monday;
