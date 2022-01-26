@@ -51,11 +51,12 @@ function calcTotal() {
     }
 }
 
+// sort Players array by total score
 function sortByTotal() {
     for (var y = 0; y < Players.length; y++) {
         for (var x = 0; x < Players.length - 1; x++) {
             var temp = Players[x];
-            if (Players[x].Total > Players[x + 1].Total) {
+            if (Players[x].Total < Players[x + 1].Total) {
                 Players[x] = Players[x + 1];
                 Players[x + 1] = temp;
             }
@@ -63,6 +64,7 @@ function sortByTotal() {
     }
 }
 
+// set ranks and account for players with equal totals
 function changeRank() {
     for (var x = 0; x < Players.length; x++) {
         Players[x].Rank = x + 1;
