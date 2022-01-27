@@ -56,7 +56,7 @@ function sortByTotal() {
     for (var y = 0; y < Players.length; y++) {
         for (var x = 0; x < Players.length - 1; x++) {
             var temp = Players[x];
-            if (Players[x].Total < Players[x + 1].Total) {
+            if (Players[x].Total > Players[x + 1].Total) {
                 Players[x] = Players[x + 1];
                 Players[x + 1] = temp;
             }
