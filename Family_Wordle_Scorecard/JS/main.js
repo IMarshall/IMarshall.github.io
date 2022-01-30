@@ -39,9 +39,9 @@ function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Su
 }
 
 var Aubree = new Player("Aub", 4, 4, 4, 3, 5, 4, "", "", 1);
-var Bryson = new Player("Bry", 5, 5, 5, 5, 5, "", "", "", 2);
-var Ian = new Player("Ian", 6, 4, 2, 3, 5, 4, "", "", 3);
-var Mom = new Player("Mom", 4, 4, 3, 4, 4, 2, "", "", 4);
+var Bryson = new Player("Bry", 5, 5, 5, 5, 5, 4, 5, "", 2);
+var Ian = new Player("Ian", 6, 4, 2, 3, 5, 4, 5, "", 3);
+var Mom = new Player("Mom", 4, 4, 3, 4, 4, 2, 3, "", 4);
 
 function calcTotal() {
     for (var x = 0; x < Players.length; x++) {
