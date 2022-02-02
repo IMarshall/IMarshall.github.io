@@ -38,7 +38,7 @@ function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Su
     Players.push(this);
 }
 
-var Aubree = new Player("Aub", 4, "", "", "", "", "", "", "", 1);
+var Aubree = new Player("Aub", 4, 3, "", "", "", "", "", "", 1);
 var Bryson = new Player("Bry", 3, 4, "", "", "", "", "", "", 2);
 var Ian = new Player("Ian", 4, 3, "", "", "", "", "", "", 3);
 var Mom = new Player("Mom", 4, 5, "", "", "", "", "", "", 4);
