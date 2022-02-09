@@ -37,6 +37,7 @@ function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Su
 
     Players.push(this);
 }
+
 var Aubree = new Player("Aub", 7, 5, "", "", "", "", "", "", 1);
 var Bryson = new Player("Bry", 3, 2, "", "", "", "", "", "", 2);
 var Ian = new Player("Ian", 4, 5, "", "", "", "", "", "", 3);
@@ -51,27 +52,54 @@ function calcTotal() {
 }
 
 // sort Players array by total score
+// function sortByTotal() {
+//     for (var y = 0; y < Players.length; y++) {
+//         for (var x = 0; x < Players.length - 1; x++) {
+//             var temp = Players[x];
+//             if (Players[x].Total > Players[x + 1].Total) {
+//                 Players[x] = Players[x + 1];
+//                 Players[x + 1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// NEW SORT FUNCTION SINCE THE OLD ONE HAD SOME BUGS
 function sortByTotal() {
-    for (var y = 0; y < Players.length; y++) {
-        for (var x = 0; x < Players.length - 1; x++) {
-            var temp = Players[x];
-            if (Players[x].Total > Players[x + 1].Total) {
-                Players[x] = Players[x + 1];
-                Players[x + 1] = temp;
+    let totals = [];
+    for (var x = 0; x < Players.length; x++) {
+        totals.push(Players[x].Total);
+    }
+    totals.sort(function (a, b) { return b - a });
+
+    for (var y = 0; y < totals.length; y++) {
+        for (var z = 0; z < Players.length; z++) {
+            if (Players[z].Total == totals[y]) {
+                Players[z].Rank = 4 - y;
+            }
+        }
+    }
+
+    for (var c = 0; c < Players.length; c++) {
+        for (var p = 0; p < Players.length; p++) {
+            var temp = Players[c];
+            if (c + 1 == Players[p].Rank) {
+                Players[c] = Players[p];
+                Players[p] = temp;
             }
         }
     }
 }
 
 // set ranks and account for players with equal totals
-function changeRank() {
-    for (var x = 0; x < Players.length; x++) {
-        Players[x].Rank = x + 1;
-        if (x > 0 && Players[x].Total == Players[x - 1].Total) {
-            Players[x].Rank = Players[x - 1].Rank;
-        }
-    }
-}
+// function changeRank() {
+//     for (var x = 0; x < Players.length; x++) {
+//         Players[x].Rank = x + 1;
+//         if (x > 0 && Players[x].Total == Players[x - 1].Total) {
+//             Players[x].Rank = Players[x - 1].Rank;
+//         }
+//     }
+// }
 
 function displayScores() {
     for (var x = 0; x < Players.length; x++) {
@@ -91,6 +119,6 @@ function displayScores() {
 function loadPage() {
     calcTotal();
     sortByTotal();
-    changeRank();
+    // changeRank();
     displayScores();
 }
