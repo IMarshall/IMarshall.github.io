@@ -38,10 +38,10 @@ function Player(Name, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Su
     Players.push(this);
 }
 
-var Aubree = new Player("Aub", 7, 5, 2, 7, 2, "", "", "", 1);
-var Bryson = new Player("Bry", 3, 2, 4, 4, 4, 5, "", "", 2);
-var Ian = new Player("Ian", 4, 5, 4, 5, 6, 4, "", "", 3);
-var Mom = new Player("Mom", 4, 7, 4, 3, 4, 4, "", "", 4);
+var Aubree = new Player("Aub", "", "", "", "", "", "", "", "", 1);
+var Bryson = new Player("Bry", 6, "", "", "", "", "", "", "", 2);
+var Ian = new Player("Ian", 4, "", "", "", "", "", "", "", 3);
+var Mom = new Player("Mom", 4, "", "", "", "", "", "", "", 4);
 
 function calcTotal() {
     for (var x = 0; x < Players.length; x++) {
