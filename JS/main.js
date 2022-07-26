@@ -1,10 +1,12 @@
 // These functions open and close the contact form
 function openForm() {
     document.getElementById("myForm").style.display = "block";
+    document.getElementById("contact-btn").style.display = "none";
 }
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
+    document.getElementById("contact-btn").style.display = "block";
 }
 
 
@@ -16,7 +18,7 @@ function inputValidationFocusOut() {
         email.style.background = "none";
     }
     else if (email.value !== "" && !email.checkValidity()) {
-        email.style.border = "1px solid darkred";
+        // email.style.border = "1px solid darkred";
         email.style.color = "darkred";
         email.style.background = "gainsboro";
         email.value = "Please enter a valid email address.";
@@ -29,9 +31,9 @@ function inputValidationFocusOut() {
 function inputValidationFocusIn() {
     let email = document.getElementById("Email");
 
-    email.style.border = "1px solid black";
-    email.style.borderRight = "none";
-    email.style.color = "black";
+    // email.style.border = "1px solid black";
+    // email.style.borderRight = "none";
+    // email.style.color = "black";
 
     if (!email.checkValidity()) {
         email.value = "";

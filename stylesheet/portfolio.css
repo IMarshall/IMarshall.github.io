@@ -90,7 +90,7 @@ img:hover {
         margin-top: 150px;
     }
     #GitHub .Column_1 {
-        padding-top: 25%;
+        /* padding-top: 25%; */
     }
 }
 
@@ -337,11 +337,15 @@ footer {
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
+
+
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
 /* Button used to open the contact form - fixed at the bottom of the page */
 .Pop_Up_Button {
+    font-size: 3vh;
+    padding: 2vh;
     position: fixed; 
     bottom: 1.55vw; 
     right: 1.55vw; 
@@ -370,36 +374,46 @@ footer {
     z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
     display: none; /* Set the display to none, we will use JavaScript to show the contact form */
     position: fixed; /* The form stays in the same location no matter what */
-    bottom: .5vw; /* Slightly up from the bottom of the viewport */
+    bottom: 1vh; /* Slightly up from the bottom of the viewport */
     right: .5vw; /* Slightly in from the right side of the viewport */
 }
 
 /* Form styling */
 .form-container {
-    width: 25vw; /* Relative sizing of the form container - 25% of the viewport width */
-    padding: 1vw; /* Adds padding between the form-popup and the form-container */
+    width: 25vw; /*Relative sizing of the form container - 25% of the viewport width*/
+    padding: 1vh; /* Adds padding between the form-popup and the form-container */
     background-color: white;
     border: 2px solid black;
+}
+
+#form-heading {
+    margin-top: 1vh;
+    font-size: 4vh;
 }
 
 /* Input fields */
 .form-container input {
     font-family: "Trebuchet MS", Optima;
     width: 100%; /* The input boxes completely fill the width of the form-container */
-    padding: .6vw; /* Adds padding to the input boxes */
-    margin: .3vw 0 .3vw 0; /* Adds space between the input boxes and the labels */
-    font-size: 1vw; /* Relative font sizing based on the width of the viewport */
-    border: 1px solid black;
+    padding: 1vh; /* Adds padding to the input boxes */
+    margin: 1vh 0 0.1vh 0; /* Adds space between the input boxes and the labels */
+    font-size: 2vh; /* Relative font sizing based on the width of the viewport */
+    border: none;
     border-right: none;
+}
+
+#Email {
+    border: none;
 }
 
 .form-container textarea {
     font-family: "Trebuchet MS", Optima;
     width: 100%; /* The input boxes completely fill the width of the form-container */
-    margin: .3vw 0 .3vw 0; /* Adds space between the input boxes and the labels */
-    font-size: 1vw; /* Relative font sizing based on the width of the viewport */
+    margin: 1vh 0 0vh 0; /* Adds space between the input boxes and the labels */
+    padding: 1vh;
+    font-size: 2vh; /* Relative font sizing based on the width of the viewport */
     resize: none;
-    border: 1px solid black;
+    border: none;
     border-right: none;
 }
 
@@ -411,16 +425,20 @@ footer {
     height: 81%;
     background-color: gainsboro;
     padding: .6vw;
-    margin: .3vw 0 .3vw 0;
+    margin: 1vh 0 0 0;
 }
 
-#Message {
+/* #Message {
     padding: .6vw;
+} */
+
+/* #Message-background {
+    height: 15.9vh;
 }
 
-#Message-background {
-    height: 91%;
-}
+#Message-label {
+    height: 15.9vh;
+} */
 
 /* General styling for all buttons */
 button {
@@ -445,6 +463,8 @@ button:hover, .form-container .btn:hover {
 
 /* Submit button */
 .form-container .btn {
+    font-size: 3vh;
+    padding: 1vh;
     background-color: white; 
     color: black;
     border-color: black;
@@ -486,15 +506,15 @@ form > div > label {
     position: absolute;
     left: 0%;
     top: 0;
-    padding: .6vw;
-    margin: .3vw 0 .3vw 0;
-    font-size: 1vw;
+    padding: .6vh;
+    margin: 1vh 0 0 0;
+    font-size: 2vh;
     color: rgb(100, 100, 100);
     z-index: 1;
     width: 100%;
     height: 81%;
     transition: 0.5s;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 form > div > input, form > div > textarea {
@@ -518,63 +538,59 @@ form input:focus + label, form textarea:focus + label {
 form input:not(:focus):valid, form textarea:not(:focus):valid{
     background: gainsboro;
 }
-
-#Message-label {
-    height: 91%;
-}
 /***** END OF CONTACT FORM STYLING *****/
 
 /***** Media Query Section *****/
 /*Media rules for paragraph font size for different screen sizes*/
-@media screen and (max-width: 527px) {
+@media screen and (max-width: 550px) {
     p {
-        font-size: 3.5vw;
+        font-size: 3.45vw;
     }
 }
 
-@media screen and (min-width: 528px) and (max-width: 660px) {
+@media screen and (min-width: 551px) and (max-width: 700px) {
     p {
-        font-size: 3vw;
+        font-size: 2.9vw;
     }
 }
 
-@media screen and (min-width: 661px) and (max-width: 799px) {
+@media screen and (min-width: 701px) and (max-width: 850px) {
     p {
-        font-size: 2.75vw;
+        font-size: 2.52vw;
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 924px) {
-    p {
-        font-size: 2.5vw;
-    }
-}
-
-@media screen and (min-width: 925px) and (max-width: 1019px) {
+@media screen and (min-width: 851px) and (max-width: 1000px) {
     p {
         font-size: 2.25vw;
     }
 }
 
-@media screen and (min-width: 1020px) and (max-width: 1310px) {
+@media screen and (min-width: 1001px) and (max-width: 1150px) {
     p {
         font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1300px) {
+    p {
+        font-size: 1.75vw;
     } 
 }
 
-@media screen and (min-width: 1311px) and (max-width: 1419px) {
+@media screen and (min-width: 1301px) and (max-width: 1450px) {
     p {
-        font-size: 1.75vw;
+        font-size: 1.65vw;
     }
 }
 
-@media screen and (min-width: 1420px) and (max-width: 2269px) {
+@media screen and (min-width: 1451px) and (max-width: 1600px) {
     p {
-        font-size: 1.5vw;
+        font-size: 1.4vw;
     }
 }
 
-@media screen and (min-width: 2270px) {
+@media screen and (min-width: 1601px) {
     p {
         font-size: 1.35vw;
     }
@@ -637,15 +653,24 @@ form input:not(:focus):valid, form textarea:not(:focus):valid{
     }
 }
 
-@media screen and (min-width: 850px) and (max-width: 1080px) {
+@media screen and (min-width: 850px) and (max-width: 1200px) {
     .form-container {
-        width: 50vw;
+        width: 40vw;
+    }
+
+    .Pop_Up_Button {
+        width: 40vw;
     }
 }
 
 @media screen and (max-width: 849px) {
     .form-container {
-        width: 100vw;
+        width: 97vw;
+        height: 60vh;
+    }
+
+    .Pop_Up_Button {
+        width: 95vw;
     }
 }
 /***** End of Media Query Section *****/
