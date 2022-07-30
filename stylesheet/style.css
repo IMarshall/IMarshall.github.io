@@ -199,6 +199,30 @@ h5 {
     transition: opacity 1s, border 1s;
 }
 
+.resume {
+    /* border: 1px solid red; */
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.resume > a {
+    font-size: 30px;
+    font-family: Avant Garde, Helvetica;
+    background: var(--darkblue);
+    color: white;
+    border: 1px solid white;
+}
+
+.resume > a:hover {
+    background: var(--blue);
+    color: white;
+}
+
+.resume > a:focus {
+    background: var(--darkblue);
+    color: white;
+}
+
 /* =====ABOUT/GITHUB STYLING===== */
 
 .photo-column {
