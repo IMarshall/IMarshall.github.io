@@ -78,6 +78,8 @@ p {
 
 .menu button.inactive:hover {
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: var(--orange);
     text-shadow: -2px 2px black;
     text-transform: lowercase;
@@ -87,6 +89,8 @@ p {
 
 .nav-button.active {
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: var(--orange);
     text-shadow: -2px 2px black;
     text-transform: lowercase;
@@ -201,6 +205,8 @@ body {
 #aboutContent p > a:hover {
     text-decoration: none;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: var(--orange);
     text-shadow: -2px 2px black;
     text-transform: lowercase;
@@ -367,6 +373,8 @@ body {
     margin-top: 5vh;
     border-radius: 0;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     border: 1px solid black;
     color: black;
     background: lightgray;
@@ -383,6 +391,8 @@ body {
     box-shadow: -3px 3px black;
     text-shadow: none;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .styledButton:hover {
@@ -392,6 +402,8 @@ body {
     box-shadow: -3px 3px black;
     text-shadow: none;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .btn.styledButton:active {
@@ -470,6 +482,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: black;
     text-transform: lowercase;
     /* text-shadow: -2px 2px black; */
@@ -500,6 +514,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: white;
     font-size: 35px;
     opacity: 0;
@@ -572,6 +588,8 @@ form {
 
 .input-container:has(input:valid) label {
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     /* font-size: 18px; */
 }
 
@@ -581,6 +599,8 @@ form {
 
 .input-container:has(textarea:valid) label {
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     /* font-size: 18px; */
 }
 
@@ -637,6 +657,8 @@ input:not(:placeholder-shown) {
         width: 20% !important;
         left: 80% !important;
         font-family: 'Lora', serif;
+        font-weight: 700;
+        font-style: italic;
         /* font-size: 18px; */
     }
 }
@@ -663,6 +685,8 @@ input:focus + label, textarea:focus + label {
     width: 20% !important;
     left: 80% !important;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     /* font-size: 18px; */
 }
 
@@ -701,6 +725,8 @@ input:focus + label, textarea:focus + label {
 #footer p > a:hover {
     text-decoration: none;
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: var(--orange);
     text-shadow: -2px 2px black;
     text-transform: lowercase;
@@ -786,6 +812,8 @@ input:focus + label, textarea:focus + label {
 
     .nav-button.active {
         font-family: 'Lora', serif;
+        font-weight: 700;
+        font-style: italic;
         color: var(--orange);
         text-shadow: -2px 2px black;
         text-transform: lowercase;
