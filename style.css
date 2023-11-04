@@ -138,6 +138,8 @@ body {
 
 .fancy-text {
     font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
     color: var(--orange);
     text-shadow: -3px 3px black;
 }
