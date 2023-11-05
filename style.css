@@ -884,14 +884,14 @@ input:focus + label, textarea:focus + label {
         width: 96%;
     }
 
-    .menu button.inactive:hover {
+    /* .menu button.inactive:hover {
         font-family: 'Inter', sans-serif;
         color: lightgray;
         text-shadow: none;
         text-transform: none;
         letter-spacing: 0;
         font-size: 20px;
-    }
+    } */
 }
 
 @media screen and (max-width: 750px) {
@@ -973,10 +973,10 @@ input:focus + label, textarea:focus + label {
         font-size: 5vw;
     }
 
-    .menuIcons>a:hover {
+    /* .menuIcons>a:hover {
         color: lightgray;
         text-shadow: none;
-    }
+    } */
 
     #aboutContent {
         margin-bottom: 5vw;
